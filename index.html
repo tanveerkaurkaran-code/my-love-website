@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .song-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  position: relative;
+  z-index: 10;
+}
+
+#songButton {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #ff8fab;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#songButton:hover {
+  background: #fb6f92;
+  transform: scale(1.05);
+}
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>For Us 🤍</title>
+
+<!-- HANDWRITTEN FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap"
+rel="stylesheet">
+
+
+<st#42445Ayle>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    background:#000;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+/* =========================
+   PHONE SCREEN
+========================= */
+
+.container{
+
+    width:100%;
+    max-width:430px;
+
+    height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#f8f5ef;
+
+}
+
+
+/* =========================
+   ALL SCREENS
+========================= */
+
+.screen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    animation:appear .5s ease;
+
+}
+
+.screen.active{
+
+    display:flex;
+
+}
+
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.94);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* =========================
+   HANDWRITTEN TEXT
+========================= */
+
+h1{
+
+    font-family:"Caveat",cursive;
+
+    font-size:52px;
+
+    line-height:1;
+
+    color:#9c302d;
+
+    margin-bottom:25px;
+
+}
+
+.text{
+
+    font-family:"Caveat",cursive;
+
+    font-size:32px;
+
+    line-height:1.1;
+
+    color:#555;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+
+    border:none;
+
+    background:#ed6945;
+
+    color:white;
+
+    font-family:"Caveat",cursive;
+
+    font-size:29px;
+
+    padding:8px 35px;
+
+    border-radius:30px;
+
+    margin:8px;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 0 #bd4730;
+
+    transition:.2s;
+
+}
+
+
+button:active{
+
+    transform:translateY(4px);
+
+    box-shadow:none;
+
+}
+
+
+/* =========================
+   PENGUINS
+========================= */
+
+.penguin{
+
+    font-size:120px;
+
+    margin:20px;
+
+    animation:float 2s ease-in-out infinite;
+
+}
+
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+
+/* =========================
+   FIRST PAGE
+========================= */
+
+#page1 h1{
+
+    transform:rotate(-3deg);
+
+}
+
+
+#page1 .text{
+
+    margin-bottom:20px;
+
+}
+
+
+/* =========================
+   YES / NO
+========================= */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+
+.no{
+
+    background:#ed6945;
+
+}
+
+
+/* =========================
+   SAD PENGUIN
+========================= */
+
+.sad{
+
+    font-size:110px;
+
+    margin:20px;
+
+    animation:shake .5s infinite alternate;
+
+}
+
+
+@keyframes shake{
+
+    from{
+
+        transform:rotate(-5deg);
+
+    }
+
+    to{
+
+        transform:rotate(5deg);
+
+    }
+
+}
+
+
+/* =========================
+   CHOOSE SCREEN
+========================= */
+
+.choose-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+
+.option{
+
+    width:105px;
+
+    min-height:145px;
+
+    background:white;
+
+    border:2px solid #e5dcd2;
+
+    border-radius:18px;
+
+    padding:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.option:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.option .penguin{
+
+    font-size:55px;
+
+    margin:5px;
+
+}
+
+
+.option p{
+
+    font-family:"Caveat",cursive;
+
+    font-size:19px;
+
+    color:#9c302d;
+
+}
+
+
+/* =========================
+   HUG
+========================= */
+
+.hug{
+
+    font-size:130px;
+
+    animation:hug 1.3s infinite;
+
+}
+
+
+@keyframes hug{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+
+/* =========================
+   LOVE
+========================= */
+
+.love{
+
+    font-family:"Caveat",cursive;
+
+    color:#9c302d;
+
+    font-size:75px;
+
+    animation:heartbeat 1s infinite;
+
+}
+
+
+.heart{
+
+    font-size:65px;
+
+    margin:20px;
+
+    animation:heartbeat 1s infinite;
+
+}
+
+
+@keyframes heartbeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final h1{
+
+    font-size:55px;
+
+}
+
+
+.final-text{
+
+    max-width:380px;
+
+    font-family:"Caveat",cursive;
+
+    font-size:25px;
+
+    line-height:1.08;
+
+    color:#555;
+
+}
+
+
+.signature{
+
+    font-family:"Caveat",cursive;
+
+    font-size:31px;
+
+    color:#9c302d;
+
+    margin:20px;
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart-float{
+
+    position:absolute;
+
+    bottom:-30px;
+
+    font-size:22px;
+
+    pointer-events:none;
+
+    animation:heartUp 3s linear forwards;
+
+}
+
+
+@keyframes heartUp{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-500px);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-height:650px){
+
+    h1{
+
+        font-size:40px;
+
+    }
+
+    .penguin{
+
+        font-size:90px;
+
+    }
+
+    .hug{
+
+        font-size:95px;
+
+    }
+
+    .final-text{
+
+        font-size:21px;
+
+    }
+
+}
+.screen {
+    display: none !important;
+}
+
+.screen.active {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.memory-photo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.memory-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+.photo-collage {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    height: 330px;
+    margin: 10px auto;
+}
+
+.photo {
+    position: absolute;
+    overflow: hidden;
+    background: white;
+    border: 5px solid white;
+    box-shadow: 0 5px 18px rgba(0,0,0,.15);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ❤️ Main photo */
+.main-photo {
+    width: 220px;
+    height: 220px;
+    left: 50%;
+    top: 55px;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    clip-path: polygon(
+        50% 95%,
+        8% 55%,
+        3% 38%,
+        8% 20%,
+        22% 8%,
+        38% 10%,
+        50% 23%,
+        62% 10%,
+        78% 8%,
+        92% 20%,
+        97% 38%,
+        92% 55%
+    );
+}
+
+/* Small photos */
+.small-photo {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.small-photo img {
+    object-fit: contain;
+}
+
+.photo2 {
+    left: 0;
+    top: 25px;
+    transform: rotate(-7deg);
+}
+
+.photo3 {
+    right: 0;
+    top: 25px;
+    transform: rotate(7deg);
+}
+
+.photo4 {
+    left: 5px;
+    bottom: 0;
+    transform: rotate(5deg);
+}
+
+.photo5 {
+    right: 5px;
+    bottom: 0;
+    transform: rotate(-5deg);
+}
+
+.memory-date {
+    font-family: "Caveat", cursive;
+    font-size: 27px;
+    color: #9c302d;
+    margin: 5px;
+}
+
+.memory-text {
+    max-width: 350px;
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    line-height: 1.1;
+    color: #555;
+    margin: 5px 0 10px;
+}
+</style>
+
+</head>
+
+
+
+<body>
+    <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="container">
+
+
+<!-- =================================
+     PAGE 1
+================================= -->
+
+<section class="screen active" id="page1">
+
+    <h1>
+        Will you choose<br>
+        us again?
+    </h1>
+
+    <div class="penguin">
+        🐧
+    </div>
+
+    <div class="text">
+        Just one little question...
+    </div>
+
+    <div class="buttons">
+
+        <button onclick="nextPage(2)">
+            YES
+        </button>
+
+          <button
+    class="no"
+    onclick="noButton()">
+
+    NO
+
+</button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     PAGE 2
+================================= -->
+
+<section class="screen" id="page2">
+
+    <h1>Choose a penguin 🐧</h1>
+
+<div class="text">
+    Each little penguin has something for you 🤍
+</div>
+
+<div style="display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin-top:30px;">
+
+    <button onclick="openPenguin('hug')">
+        🐧<br>
+        HUG
+    </button>
+
+    <button onclick="openPenguin('memories')">
+        🐧<br>
+        MEMORIES
+    </button>
+
+    <button onclick="openPenguin('love')">
+        🐧<br>
+        FOR US
+    </button>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================
+     PAGE 3
+================================= -->
+
+<section class="screen" id="page3">
+
+    <h1>
+        I DON'T WANT<br>
+        TO LOSE YOU
+    </h1>
+
+    <div class="sad">
+        🥺
+    </div>
+
+    <div class="text">
+
+        Can we try again?
+
+    </div>
+
+    <button onclick="nextPage(4)">
+        YES 🤍
+    </button>
+
+</section>
+
+
+
+<!-- =================================
+     PAGE 4
+================================= -->
+<section class="screen" id="page4">
+
+    <h1>Choose a penguin 🤍</h1>
+
+    <div class="text">
+        Each one has something special for you...
+    </div>
+
+    <div class="choose-container">
+
+        <!-- PENGUIN 1 -->
+
+        <div class="option"
+             onclick="openPenguin('hug')">
+
+            <div class="penguin">
+                🐧
+            </div>
+
+            <p>HUG ME</p>
+
+        </div>
+
+
+        <!-- PENGUIN 2 -->
+
+        <div class="option"
+             onclick="openPenguin('memories')">
+
+            <div class="penguin">
+                🐧
+            </div>
+
+            <p>OUR MEMORIES</p>
+
+        </div>
+
+
+        <!-- PENGUIN 3 -->
+
+        <div class="option"
+             onclick="openPenguin('love')">
+
+            <div class="penguin">
+                🐧
+            </div>
+
+            <p>ONE MORE</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+  
+
+
+
+<!-- =================================
+     PAGE 5
+================================= -->
+<section class="screen" id="hugPage">
+
+    <div class="penguin">
+        🐧🫂
+    </div>
+
+    <h1>
+        Come here...
+    </h1>
+
+    <div class="text">
+        No matter how many fights we have,
+        I still want to hug you.
+    </div>
+
+    <br>
+
+    <div class="text">
+        Just for a moment...<br>
+        no anger, no ego. 🤍
+    </div>
+
+    <button onclick="backToPenguins()">
+        BACK
+    </button>
+
+</section>
+<section class="screen" id="memoriesPage">
+
+    <h1>Our Little Memories ♡</h1>
+
+    <div class="photo-collage">
+
+        <div class="photo main-photo">
+            <img src="photo1.jpg" alt="Memory">
+        </div>
+
+        <div class="photo small-photo photo2">
+            <img src="photo2.jpg" alt="Memory">
+        </div>
+
+        <div class="photo small-photo photo3">
+            <img src="photo3.jpg" alt="Memory">
+        </div>
+
+        <div class="photo small-photo photo4">
+            <img src="photo4.jpg" alt="Memory">
+        </div>
+
+        <div class="photo small-photo photo5">
+            <img src="photo5.jpg" alt="Memory">
+        </div>
+
+    </div>
+
+    <div class="memory-date">
+        Our moments ♡
+    </div>
+
+    <div class="memory-text">
+        From our stupid conversations
+        to the moments we couldn't stop laughing... 🥹
+    </div>
+
+    <button onclick="backToPenguins()">
+        BACK
+    </button>
+
+</section>
+<section class="screen" id="lovePage">
+
+    <div class="penguin">
+        🐧❤️
+    </div>
+
+    <h1>
+        And this one...
+    </h1>
+
+    <div class="text">
+        is for everything I still
+        feel for you.
+    </div>
+
+    <br>
+
+    <div class="text">
+        I don't need us to be perfect.
+        I just want us to keep trying.
+    </div>
+
+    <br>
+
+    <h1>
+        I choose you. 🤍
+    </h1>
+
+    <button onclick="backToPenguins()">
+        <button onclick="toggleMusic()" id="musicBtn">
+    🎵 Play Our Song
+</button>
+        BACK
+    </button>
+
+</section>
+<script>
+
+function nextPage(pageNumber){
+
+    document.querySelectorAll(".screen").forEach(function(page){
+        page.classList.remove("active");
+    });
+
+    const next = document.getElementById("page" + pageNumber);
+
+    if(next){
+        next.classList.add("active");
+    }
+}
+function playSong(){
+    document.getElementById("bgMusic").play();
+}
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+
+    if (music.paused) {
+        music.play();
+        btn.innerHTML = "⏸️ Pause Our Song";
+    } else {
+        music.pause();
+        btn.innerHTML = "🎵 Play Our Song";
+    }
+}
+
+/* =================================
+   CHOOSE PENGUIN
+================================= */
+
+function chooseOption(choice){
+
+    if(choice === "hug"){
+
+        nextPage(5);
+
+    }
+
+    else if(choice === "sorry"){
+
+        nextPage(5);
+
+    }
+
+    else if(choice === "love"){
+
+        nextPage(5);
+
+    }
+
+}
+function selectPenguin(element, choice){
+
+    document.querySelectorAll(".option").forEach(function(item){
+        item.style.transform = "";
+        item.style.boxShadow = "";
+    });
+
+    element.style.transform = "scale(1.15) translateY(-10px)";
+    element.style.boxShadow = "0 10px 25px rgba(0,0,0,.18)";
+
+    let text = document.getElementById("selectedText");
+
+    text.style.display = "block";
+
+    if(choice === "hug"){
+        text.innerHTML = "Okay... you chose a hug 🫂";
+    }
+
+    else if(choice === "love"){
+        text.innerHTML = "I knew you'd choose love 🤍";
+    }
+
+    else{
+        text.innerHTML = "That's the one I wanted... us. 🥹";
+    }
+
+    makeManyHearts();
+
+    setTimeout(function(){
+        nextPage(5);
+    },1200);
+}
+
+
+/* =================================
+   ACCEPT HUG
+================================= */
+
+function hugAccepted(){
+
+    makeManyHearts();
+
+
+    setTimeout(function(){
+
+        nextPage(4);
+
+    },1000);
+
+}
+
+
+
+/* =================================
+   FLOATING HEARTS
+================================= */
+
+function makeHearts(){
+
+    for(let i=0;i<6;i++){
+
+        setTimeout(function(){
+
+            let heart =
+            document.createElement("div");
+
+
+            heart.className =
+            "heart-float";
+
+
+            heart.innerHTML =
+            ["♡","♥","🤍","❤️"]
+            [Math.floor(Math.random()*4)];
+
+
+            heart.style.left =
+            Math.random()*90 + "%";
+
+
+            document
+            .querySelector(".container")
+            .appendChild(heart);
+
+
+            setTimeout(function(){
+
+                heart.remove();
+
+            },3000);
+
+
+        },i*150);
+
+    }
+
+}
+
+
+
+/* =================================
+   MANY HEARTS
+================================= */
+
+function makeManyHearts(){
+
+    for(let i=0;i<20;i++){
+
+        setTimeout(function(){
+
+            makeHearts();
+
+        },i*50);
+
+    }
+
+}
+
+
+
+/* =================================
+   RESTART
+================================= */
+
+function restart(){
+
+    document
+    .getElementById("page" + currentPage)
+    .classList.remove("active");
+
+
+    currentPage = 1;
+
+
+    document
+    .getElementById("page1")
+    .classList.add("active");
+
+}
+function noButton(){
+
+    const button = document.querySelector("#page1 .no");
+
+    button.style.position = "fixed";
+
+    const maxX =
+        window.innerWidth - button.offsetWidth - 20;
+
+    const maxY =
+        window.innerHeight - button.offsetHeight - 20;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+
+}
+function openPenguin(type){
+
+    /* Hide penguin selection */
+    document.querySelectorAll(".screen").forEach(function(page){
+    page.classList.remove("active");
+});
+
+
+    /* Open selected penguin */
+
+    if(type === "hug"){
+
+        document.getElementById("hugPage")
+            .classList.add("active");
+
+    }
+
+    else if(type === "memories"){
+
+        document.getElementById("memoriesPage")
+            .classList.add("active");
+
+    }
+
+    else if(type === "love"){
+
+        document.getElementById("lovePage")
+            .classList.add("active");
+
+    }
+
+    makeManyHearts();
+
+}
+
+function backToPenguins(){
+
+    document.querySelectorAll(".screen").forEach(function(page){
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page2")
+        .classList.add("active");
+
+}
+</script>
+
+<div class="song-area">
+  <button id="songButton" type="button">
+    🎵 Play Our Song
+  </button>
+
+  <audio id="ourSong" preload="auto">
+    <source src="./song.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+</div>
+
+<script>
+  const song = document.getElementById("ourSong");
+  const songButton = document.getElementById("songButton");
+
+  songButton.addEventListener("click", function () {
+    if (song.paused) {
+        song.currentTime = 110; // 1 minute 50 seconds
+      song.play()
+        .then(function () {
+          songButton.textContent = "⏸️ Pause Our Song";
+        })
+        .catch(function (error) {
+          console.log(error);
+          alert("song.mp3 file nahi mil rahi.");
+        });
+    } else {
+      song.pause();
+      songButton.textContent = "🎵 Play Our Song";
+    }
+  });
+
+  song.addEventListener("ended", function () {
+    songButton.textContent = "🎵 Play Our Song";
+  });
+</script>
+</body>
+</html>
